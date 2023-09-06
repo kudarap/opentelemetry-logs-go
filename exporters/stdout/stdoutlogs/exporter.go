@@ -18,13 +18,14 @@ package stdoutlogs
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
-	sdk "github.com/kudarap/opentelemetry-logs-go/sdk/logs"
-	"io"
 	"os"
 	"strings"
 	"sync"
 	"time"
+
+	sdk "github.com/kudarap/opentelemetry-logs-go/sdk/logs"
 )
 
 var _ sdk.LogRecordExporter = &Exporter{}
@@ -36,14 +37,19 @@ func NewExporter(options ...Option) (*Exporter, error) {
 		return nil, err
 	}
 
+	enc := json.NewEncoder(cfg.Writer)
+	if cfg.PrettyPrint {
+		enc.SetIndent("", "\t")
+	}
+
 	return &Exporter{
-		writer: cfg.Writer,
+		encoder: enc,
 	}, nil
 }
 
 // Exporter is an implementation of logs.LogRecordSyncer that writes spans to stdout.
 type Exporter struct {
-	writer    io.Writer
+	encoder   *json.Encoder
 	encoderMu sync.Mutex
 
 	stoppedMu sync.RWMutex
