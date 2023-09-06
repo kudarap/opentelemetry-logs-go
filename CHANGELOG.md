@@ -40,7 +40,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Added
 
 - implementation of [Logs Bridge API](https://opentelemetry.io/docs/specs/otel/logs/bridge-api) with Stable API and SDK API interfaces.
-- Package all-in-one for logs `github.com/agoda-com/opentelemetry-logs-go`
+- Package all-in-one for logs `github.com/kudarap/opentelemetry-logs-go`
 - Package module `semconv` with [Logs Exceptions Semantic Conventions](https://opentelemetry.io/docs/specs/otel/logs/semantic_conventions/exceptions/#attributes)
 - Package module `logs` with [Stable Log Model](https://opentelemetry.io/docs/specs/otel/logs/data-model), [Logger](https://opentelemetry.io/docs/specs/otel/logs/bridge-api/#logger) and [LoggerProvider](https://opentelemetry.io/docs/specs/otel/logs/bridge-api/#loggerprovider) interfaces
 - Package module `sdk` with [Logger SDK](https://opentelemetry.io/docs/specs/otel/logs/sdk/) implementation

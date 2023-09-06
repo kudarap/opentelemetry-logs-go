@@ -19,7 +19,7 @@ package stdoutlogs
 import (
 	"context"
 	"fmt"
-	sdk "github.com/agoda-com/opentelemetry-logs-go/sdk/logs"
+	sdk "github.com/kudarap/opentelemetry-logs-go/sdk/logs"
 	"io"
 	"os"
 	"strings"
