@@ -87,7 +87,7 @@ import (
 	"github.com/kudarap/opentelemetry-logs-go/exporters/otlp/otlplogs/otlplogshttp"
 	"go.opentelemetry.io/otel/sdk/resource"
 	semconv "go.opentelemetry.io/otel/semconv/v1.24.0"
-	sdk "github.com/agoda-com/opentelemetry-logs-go/sdk/logs"
+	sdk "github.com/kudarap/opentelemetry-logs-go/sdk/logs"
 )
 
 func newResource() *resource.Resource {

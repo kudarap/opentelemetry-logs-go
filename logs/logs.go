@@ -17,11 +17,12 @@ limitations under the License.
 package logs
 
 import (
+	"time"
+
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/sdk/instrumentation"
 	"go.opentelemetry.io/otel/sdk/resource"
 	"go.opentelemetry.io/otel/trace"
-	"time"
 )
 
 // LogRecordConfig contains mutable fields usable for constructing
@@ -94,7 +95,7 @@ func (l LogRecord) Attributes() *[]attribute.KeyValue            { return l.attr
 func (l LogRecord) private()                                     {}
 
 // SeverityNumber Possible values for LogRecord.SeverityNumber.
-type SeverityNumber int32
+type SeverityNumber int
 
 const (
 	// UNSPECIFIED is the default SeverityNumber, it MUST NOT be used.
