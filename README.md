@@ -22,7 +22,7 @@ repository Logs module will have status "Stable".
 
 ## Compatibility 
 
-Minimal supported go version `1.21`
+Minimal supported go version `1.24`
 
 ## Project packages
 
@@ -86,7 +86,7 @@ import (
 	"github.com/kudarap/opentelemetry-logs-go/exporters/otlp/otlplogs"
 	"github.com/kudarap/opentelemetry-logs-go/exporters/otlp/otlplogs/otlplogshttp"
 	"go.opentelemetry.io/otel/sdk/resource"
-	semconv "go.opentelemetry.io/otel/semconv/v1.24.0"
+	semconv "go.opentelemetry.io/otel/semconv/v1.30.0"
 	sdk "github.com/kudarap/opentelemetry-logs-go/sdk/logs"
 )
 
