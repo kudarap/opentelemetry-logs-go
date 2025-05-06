@@ -47,7 +47,7 @@ package myInstrumentedLogger
 import (
 	otel "github.com/kudarap/opentelemetry-logs-go"
 	"github.com/kudarap/opentelemetry-logs-go/logs"
-	semconv "go.opentelemetry.io/otel/semconv/v1.20.0"
+	semconv "go.opentelemetry.io/otel/semconv/v1.30.0"
 )
 
 const (
